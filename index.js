@@ -145,8 +145,108 @@ function fn() {
     return 10;
 }
 
-console.log(date) //error out of scope
+//console.log(date) //error out of scope
 
 //assigning default parameter
 
-//
+//IIFE - immediately invoked function expression
+(() => console.log('IIFE'))()
+//arrow fucntion syntax
+const fn1 = () =>{
+    console.log("fn1")
+    console.log(12342987520934578)
+}
+
+fn1()
+                //implicit return
+const fn2 = (a) => a;
+console.log(fn2(67))
+
+//multiple paramentereresrasdfjghasdf
+const fnpara= (para1,para2) => {
+    console.log(para1)
+    return para2
+}   ;
+
+console.log(fnpara(3,"asd"))
+
+//callback functins
+setTimeout(() => console.log("expersion to bet ex3ecutes"),3000)
+
+//methods in a function
+const math={
+    sum:(a,b) => a+b//; this is a dict so adding ';' will result in an error
+    //properties
+    ,pi:3.14
+};
+console.log(math.sum(4,5))
+console.log(math.pi)
+
+//extracting values withotu index
+//destucturing arrays
+const [a1,a2]=arr;
+console.log(a1,a2);
+
+//object destructring
+const myComputer={
+    type:'latpop',
+    randomAccesMemory: 67
+}
+//key names should be same else error
+//bread taste better than key
+//const{type,ram}=myComputer;
+//console.log(ram,type);
+//cannont store more than once
+const{type,randomAccessMemory}=myComputer;
+console.log(randomAccessMemory,type);
+
+//Object destructuring of the function parameters
+/**
+ * so wtf
+ * 
+ * when dealing with methods we have to maintain order of parameter
+ * but using object destructuring we
+ * can avoid
+ * that
+ */
+
+const computerInfo= (type,ram) =>{
+    console.log('type:'+type+' ram:'+ram)  
+};
+computerInfo('pc',76);
+
+//seperate order in input para but output is as
+//planned
+const computerInfo1= ({ram,type}) =>{
+    //const{type,ram}=computer
+    console.log('type:'+type+' ram:'+ram) 
+    return [type,ram] 
+};
+const myLaptop={
+    type:'pc',
+    ram:775
+};
+console.log(computerInfo1(myLaptop));
+
+//string literal
+const type1= 'tablet';
+const ram1=9;
+const info=`Type: ${type1} Ram:${ram1}`;
+console.log(`Type: ${type1} Ram:${ram1}`)
+console.log(info)
+
+
+//if else statement
+if (10>2) console.log('truthy')
+
+if (10>2) 
+    console.log('truthy')
+
+if (10<2){
+    console.log('truthy');//u r allowed to ';'
+} else{
+    console.log('false');
+}
+//let temp=if (10>2) console.log('truthy') -wrong
+
+trial
