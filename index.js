@@ -75,3 +75,78 @@ console.log(!!a)
   * 
   * exp2 wont be evaluated if exp1 if false
   */
+
+ //ternary operator(experession)
+ const res= 4>3
+    ?true
+    :false;
+
+/**
+ * Object creation
+ * convention-> spilling in lines
+ */
+const player = {
+    name:"rafath",
+    online: false
+};
+
+/**
+ * player here is just a pointer
+ * since the object is a referenc type we are 
+ * able to modify it using the pointer
+ * even tho its a 'const' type
+ */
+console.log(player)
+console.log(player.name)
+console.log(player["name"])
+
+player.level=19;
+console.log(player.level);
+
+delete player.level;
+console.log(player.level);
+
+//using variable instead of keyname
+let field='clanName';
+player[field]="Akatsuki"
+
+//printing objectkeys
+console.log(Object.keys(player))
+console.log(Object.values(player))
+
+//arrays are dynamic too can hold anything
+const arr=['player',3,'lionheart']
+console.log(arr)
+console.log(Object.keys(arr))
+console.log(Object.values(arr))
+
+//inserting into arrays leaves spaces in between
+console.log(arr[2])
+arr[3]='ayaka'
+console.log(arr[3])
+arr[10]='assassin'
+console.log(arr)
+//pushing elements to the end
+arr.push('help')
+console.log(arr)
+
+
+//creating functin
+function fn(){
+    console.log("inside the function")
+}
+
+fn();
+
+
+//function scope
+function fn() {
+    const date=Date()
+    return 10;
+}
+
+console.log(date) //error out of scope
+
+//assigning default parameter
+
+//
